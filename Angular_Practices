@@ -1,0 +1,49 @@
+Day 1:-
+===================
+1) Two Way Data Binding:- In Angular, two-way data binding allows synchronization between the model (data) and the view (UI), 
+                          meaning any changes in the UI are immediately reflected in the component class (model), and vice versa. 
+                          This is achieved using Angular's [(ngModel)] directive, which is a combination of property binding ([ ]) and event binding (( )). 
+
+2) Components:- A component is one of the core building blocks of an Angular application.
+                Used to define a specific UI element and its behavior. Each component in Angular consists of four main parts: 
+               1) The TypeScript class, 
+               2) The HTML template, 
+               3) The CSS styles,
+               4) The metadata that ties these pieces together.
+
+    Structure of an Angular Component:- 
+               1) TypeScript Class: Contains the business logic and data for the component.
+               2) HTML Template: Defines the layout and content of the component.
+               3) CSS Styles: Includes styles that are scoped to the component.
+               4) Decorator Metadata: Specifies the component’s selector, template, and style locations.
+
+
+Data binding in Angular is a powerful feature that connects the component's logic (TypeScript code) with the UI (HTML template).
+It enables automatic synchronization of data between the model (component) and the view (template) to create dynamic and interactive applications.
+Angular offers four main types of data binding:
+
+1) Interpolation (One-Way Binding)
+Syntax:    {{ variableName }}
+Description: Displays data from the component directly in the HTML.
+             It’s read-only, meaning it only flows data from the component to the view.
+
+
+2) Property Binding (One-Way Binding)
+Syntax: [property]="expression"
+Description: Binds data from the component to an element's property (like src for an image, disabled for a button, etc.). 
+             It updates the property when the component data changes but doesn’t reflect changes from the DOM back to the component.
+
+
+3) Event Binding
+Syntax: (event)="expression"
+Description: Captures and responds to user events such as clicks, key presses, mouse movements, etc.,
+             and updates the component or performs actions when the event is triggered.
+
+4) Two-Way Data Binding
+Syntax: [(ngModel)]="variable"
+Description: Synchronizes data in both directions, meaning that changes in the view update the component and changes in the component update the view.
+             It’s commonly used with form inputs.
+
+Learning Key_Points:-
+            One-Way Binding: Interpolation and property binding flow data from the component to the view, while event binding lets the view affect the component.
+            Two-Way Binding: Allows synchronized updates in both directions, ideal for dynamic forms and interactive data-driven interfaces.
