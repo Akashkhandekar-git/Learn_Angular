@@ -1,0 +1,96 @@
+<div class="container-fluid">
+    <div class="row text-center d-flex justify-content-center m-5 bg-warning p-3 rounded-3 shadow">
+       <h1>Flow Control</h1>
+       <button class="btn btn-primary w-25 my-3"  [routerLink]= "['/structure_directive']"><h5>Go to Structure Directive</h5></button>
+    </div>
+   <div class="row pt-5">
+     <div class="col-3 text-white">
+        @if(isDiv1Visible){
+            <div class="bg-danger p-5 text-center shadow rounded-3 ">
+                <h2 >Div 1</h2>
+              </div>
+
+        }
+       
+     </div>
+ 
+    
+     <div class="col-3">
+        @if(isDiv2Visible){
+            <div class="bg-warning p-5 text-center shadow rounded-3">
+                <h2>Div 2</h2>
+              </div>
+        
+        }
+        @else {
+            <!-- <div class="bg-danger p-5 text-center shadow rounded-3">
+                <h2>Div 2</h2>
+              </div> -->
+            
+        }
+       
+     </div>
+ 
+   
+     <div class="col-3 text-white">
+       <div class="bg-primary p-5 text-center shadow rounded-3">
+         <h2>Div 3 </h2>
+       </div>
+     </div>
+     <div class="col-3 text-white">
+         <div class="bg-success p-5 text-center shadow rounded-3">
+           <h2>Div 4</h2>
+         </div>
+       </div>
+     
+   </div>
+   <div class="row mt-5">
+     <div class="col-3 text-center">
+         <button class="btn btn-primary pt-3 px-5" (click)="div1Show()"><h4>Show</h4></button>
+         <button class="btn btn-danger pt-3  px-5 mx-3" (click)="div1Hide()"><h4>Hide</h4></button>
+       </div>
+ 
+       <div class="col-3 text-center">
+          <button class="btn btn-warning pt-3 px-5 " (click)="div2Toggle()"> <h4>Toggle</h4></button>
+       </div>
+ 
+       <div class="col-3">
+         <select>
+    
+           <option></option>
+
+         </select>
+       </div>
+ 
+       <div class="col-3 text-center">
+         <input class="w-25 text-center rounded-3 shadow"  type="number" placeholder="Enter Num1">
+         <input class="w-25 text-center rounded-3 shadow mx-3" type="number" placeholder="Enter Num2">
+     </div>
+   
+   
+   </div>
+   <div class="row">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    FirstName
+                </th>
+                <th>
+                     LastName
+                </th>
+                <th>
+                    Age
+                </th>
+                <th>
+                    City
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+    </table>
+   </div>
+ </div>
+ 
