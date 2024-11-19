@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" (click)="getAllUser()"><h4>Get API</h4></button>
+            @for(user of userData; track $index ){
+
+                <div>
+                    <h5>{{user | json}}</h5>
+                    
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { StructureDirectiveComponent } from './Directive/structure-directive/str
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { AttributeDirectivesComponent } from './Directive/attribute-directives/attribute-directives.component';
 import { FlowControlComponent } from './Flow_Control/flow-control/flow-control.component';
+import { ApiIntegrationComponent } from './API_Integration/api-integration/api-integration.component';
 
 export const routes: Routes = [
 
@@ -23,7 +24,11 @@ export const routes: Routes = [
     },
     {
         path:"flow_control",
-        component:FlowControlComponent,
+        component: FlowControlComponent,
+    },
+    {
+        path:"get_api",
+        component: ApiIntegrationComponent
     }
 
 
