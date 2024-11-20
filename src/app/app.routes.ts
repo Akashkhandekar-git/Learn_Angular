@@ -4,6 +4,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { AttributeDirectivesComponent } from './Directive/attribute-directives/attribute-directives.component';
 import { FlowControlComponent } from './Flow_Control/flow-control/flow-control.component';
 import { ApiIntegrationComponent } from './API_Integration/api-integration/api-integration.component';
+import { FormComponent } from './Forms/form/form.component';
 
 export const routes: Routes = [
 
@@ -29,6 +30,10 @@ export const routes: Routes = [
     {
         path:"get_api",
         component: ApiIntegrationComponent
+    },
+    {
+        path:"template_form",
+        component: FormComponent,
     }
 
 

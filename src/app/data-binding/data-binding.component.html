@@ -1,15 +1,66 @@
 <!-- Interpolation -->
-<h2>{{firstName}}</h2> <h2>{{LastName}}</h2> 
+<div class="container">
+  <div class="row">
+    <div class="bg-dark text-white text-center p-2 shadow rounded">
+      <h1>Data Binding</h1>
+    </div>
+    <div class="col-3 ">
+      <div class="shadow rounded">
+        <div class="text-center m-5">
+          <h3 class="text-decoration-underline">Interpolation</h3>
+        </div>
 
+        <div class="text-center">
+          <h2>{{ FirstName }}</h2>
+          <h2>{{LastName}}</h2>
+        </div>
+      </div>
+    </div>
 
-<!-- Data Binding -->
-<button [class]="bgColor"> Click me </button>
+    <div class="col-3 text-center rounded shadow">
+      <h3 class="m-5 text-decoration-underline">Property Binding</h3>
+      <span [class]="bgColor" class="px-5 py-3">Color</span>
 
+      <!-- Event Binding -->
+    </div>
+    <div class="col-3 text-center rounded shadow">
+        <div class="m-5 "><h3 class="text-decoration-underline">Event Binding</h3></div>
+      <div>
+        <button (click)="changeColor()" class="btn btn-dark">
+          Change Backgrourd
+        </button>
+      </div>
+    </div>
 
-<!-- Event Binding -->
+    <!-- Two_Way Binding -->
 
-<button (click) = "changeColor()"> Change Backgrourd</button>
-
-<!-- Two_Way Binding -->
-
-<input type="text" [(ngModel)]="LastName" >
+    <div class="col-3 rounded shadow">
+        <div class="text-center mt-5">
+            <h3 class="text-decoration-underline">Two-Way Data Binding</h3>
+        </div>
+      <form class="p-3">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            [(ngModel)]="FirstName"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Last Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputPassword1"
+            [(ngModel)]="LastName"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

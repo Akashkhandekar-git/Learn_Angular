@@ -1,27 +1,22 @@
 import { JsonPipe } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { APICallsService } from '../../Service/api-calls.service';
 
 @Component({
   selector: 'app-api-integration',
   standalone: true,
-  imports: [RouterLink, JsonPipe],
+  imports: [JsonPipe],
   templateUrl: './api-integration.component.html',
-  styleUrl: './api-integration.component.css'
+  styleUrl: './api-integration.component.css',
 })
 export class ApiIntegrationComponent {
-  userData:any [] = [];
+  userData: any[] = [];
 
-  constructor(private http:HttpClient){
-    
-    }
+  constructor(private getApi: APICallsService) {}
 
-    getAllUser(){
-      this.http.get("https://jsonplaceholder.typicode.com/posts").subscribe((res:any)=>{
-        this.userData = res;
-
-      })
-
+  getAllUser() {
+    this.getApi.getAllData().subscribe((res: any) => {
+      this.userData = res;
+    });
   }
 }

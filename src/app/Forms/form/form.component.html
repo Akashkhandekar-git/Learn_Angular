@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-5">
+      <div class="bg-dark text-white text-center p-3 shadow rounded">
+        <h1>Template Form [using ngModel]</h1>
+      </div>
+
+      <form class="shadow rounded p-5">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="email"
+            [(ngModel)]="userCredential.email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="password"
+            [(ngModel)]="userCredential.password"
+          />
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="btn btn-dark mt-4 px-5"
+            (click)="onSubmitData()"
+          >
+            <h6>Submit</h6>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-5">
+          @if(userData){
+          <div class="text-center m-5">
+            <div class="text-center bg-dark text-white p-3 rounded shadow"><h3>User Detail</h3></div>
+            
+            <table class="table table-secondary table-striped">
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Password</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ userData.email }}</td>
+                  <td>{{ userData.password }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

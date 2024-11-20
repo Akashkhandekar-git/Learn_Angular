@@ -12,7 +12,7 @@ export class DataBindingComponent {
 
   //Interpolation
 
-  firstName:string = "Akash";
+  FirstName:string = "Akash";
   LastName:string = "Khandekar";
 
   bgColor:string = "bgColor";
